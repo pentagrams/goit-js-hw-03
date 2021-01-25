@@ -5,8 +5,16 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function(arr, prop) {
-  // твой код
+const getAllPropValues = function (arr, prop) {
+    let array = [];
+    for (const product of arr) {
+        if (product[prop]) {
+            array.push(product[prop])
+        } else {
+            return array = [];
+        }
+    }
+    return array;
 };
 
 /*
@@ -16,4 +24,4 @@ console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер
 
 console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
 
-console.log(getAllPropValues(products, 'category')); // []
+console.log(getAllPropValues(products, 'category')); // []   
